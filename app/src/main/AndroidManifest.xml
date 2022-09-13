@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ar.tvplaye" >
+
+    <application
+        android:name=".DogsApp"
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:icon="@mipmap/ic_dogs"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_dogs_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DogHouseWin"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31" >
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/token"/>
+        <activity
+            android:name=".activities.DogWebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MainActivityDog"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DogActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.FirstActivity"
+            android:exported="true"
+            android:theme="@style/Theme.SplashDogStyle" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
